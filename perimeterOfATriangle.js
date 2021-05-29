@@ -16,13 +16,13 @@ rl.on('line', function (line) {
 
     numberOfSegments = parseInt(line)
 
-   } else { 
+  } else {
 
-    arrayOfSegments = line.split(' ').map(element => parseInt(element)).sort()
+    arrayOfSegments = line.split(' ').map(element => parseInt(element)).sort((a, b) => a - b)
 
     rl.close()
 
-    if (arrayOfSegments.length != numberOfSegments) { 
+    if (arrayOfSegments.length != numberOfSegments) {
       console.log(0)
     } else {
       console.log(getMaxPerimeterOfATriangle())
